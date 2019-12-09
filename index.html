@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FormWizard_v5</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- MATERIAL DESIGN ICONIC FONT -->
+	<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="imag"><h3 style="position: absolute; margin-left: 30px; color: whitesmoke;"><img src="logo-2.png" height="75px" width="75px"> Спаси и Сохрани</h3>
+	<div align="right"  style="margin-top: 20px"  >
+		<button type="button" class="btn btn-primary align-center" style="margin-right: 0px" data-toggle="modal" data-target="#exampleModal"
+				data-whatever="Нотариус Павел">Обратиться к нотариусу</button>
+		<button type="button" class="btn btn-primary" style="margin-right: 20px" data-toggle="modal" data-target="#exampleModal"
+				data-whatever="Юрист Василий">Обратиться к юристу</button>
+	</div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Сообщение о проблеме</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="recipient-name" class="col-form-label">Получатель</label>
+						<input type="text" class="form-control" id="recipient-name">
+					</div>
+					<div class="form-group">
+						<label for="message-text" class="col-form-label">Сообщение</label>
+						<textarea class="form-control" id="message-text"></textarea>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Send message</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="image-holder">
+		<img src="images/form-wizard.png" alt="">
+	</div>
+	<form>
+		<div id="wizard">
+			<!--					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1onU0GOSTQR7bfCrPCCQ70xMA4piYtPniqHObbKiXjVDdLg/viewform?embedded=true" width="640" height="398" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>					&lt;!&ndash; SECTION Дети &ndash;&gt;-->
+			<section id="children">
+				<h2>У Вас есть несовершеннолетние дети?</h2>
+				<div class="checkbox-circle">
+					<label class="active">
+						<input class="choose1" type="radio" name="billing method" value="yes">Да
+						<span class="checkmark"></span>
+					</label>
+					<label>
+						<input class="choose2" type="radio" name="billing method" value="no">Нет
+						<span class="checkmark"></span>
+
+					</label>
+					<button type="button" class="btn btn-outline-success" id="back-children">Назад</button>
+				</div>
+			</section>
+
+			<!-- SECTION Согласие -->
+			<section id="accept">
+				<h2>Есть ли согласие второго супруга на развод?</h2>
+				<div class="checkbox-circle">
+					<label class="active">
+						<input type="radio" name="billing method" value="yes_1" checked>Да
+						<span class="checkmark"></span>
+
+					</label>
+					<label>
+						<input type="radio" name="billing method" value="no_1">Нет
+						<span class="checkmark"></span>
+
+					</label>
+					<button type="button" class="btn btn-outline-success" id="back-accept">Назад</button>
+				</div>
+
+
+			</section>
+
+			<!-- SECTION имущество -->
+			<section id="property">
+				<h2>Есть ли спор об имуществе?</h2>
+				<div class="checkbox-circle">
+					<label class="active">
+						<input class="choose3" type="radio" name="billing method" value="yes_2" checked>Да
+						<span class="checkmark"></span>
+
+					</label>
+					<label>
+						<input class="choose4" type="radio" name="billing method" value="no_2">Нет
+						<span class="checkmark"></span>
+
+					</label>
+					<button type="button" class="btn btn-outline-success" id="back-property">Назад</button>
+				</div>
+
+
+
+			</section>
+
+			<!-- SECTION совместное заявление -->
+			<section id="child_info">
+				<h2>Введите информацию о ребёнке</h2>
+				<div class="form-row form-group">
+					<div class="form-holder">
+						<label for="">
+							Имя *
+						</label>
+						<input type="text" class="form-control" id="child_name">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Фамилия *
+						</label>
+						<input type="text" class="form-control" id="child_surname">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Отчество *
+						</label>
+						<input type="text" class="form-control" id="child_middle_name">
+					</div>
+					<button type="button" class="btn btn-primary download_sue_2">Скачать исковое заявление</button>
+					<button type="button" class="btn btn-outline-success" id="back-child">Назад</button>
+				</div>
+				<div>Выберите, с кем должны остаться дети</div>
+				<div class="checkbox-circle">
+					<label class="active">
+						<input class="choose5" type="radio" name="billing method" value="yes_2" checked>Со мной
+						<span class="checkmark"></span>
+
+					</label>
+					<label>
+						<input class="choose6" type="radio" name="billing method" value="no_2">С бывшим супругом
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</section>
+
+			<!-- SECTION совместное заявление -->
+			<section id="united">
+				<h2>Сформировать совместное заявление?</h2>
+				<div class="checkbox-circle">
+					<label class="active">
+						<input type="radio" name="billing method" value="yes_2" checked>Да
+						<span class="checkmark"></span>
+
+					</label>
+					<label>
+						<input type="radio" name="billing method" value="no_2">Нет
+						<span class="checkmark"></span>
+
+					</label>
+					<button type="button" class="btn btn-outline-success" id="back-united">Назад</button>
+				</div>
+			</section>
+
+
+
+
+
+
+			<!-- SECTION Информация для поиска -->
+			<section id="search">
+				<h2>Введите информацию для поиска имущества и иска</h2>
+				<div class="form-row form-group">
+					<div class="form-holder">
+						<label for="">
+							Имя *
+						</label>
+						<input type="text" class="form-control" id="husband_name">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Фамилия *
+						</label>
+						<input type="text" class="form-control" id="husband_surname">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Отчество *
+						</label>
+						<input type="text" class="form-control" id="husband_middle_name">
+					</div>
+				</div>
+				<div class="form-row">
+					<label for="">
+						Место жительства *
+					</label>
+					<input type="text" class="form-control" placeholder="Адрес" style="margin-bottom: 20px" id = 'husband_address'>
+				</div>
+				<div class="form-row">
+					<label for="">
+						Название компании супруга (при наличии). Мы проверим информацию в ЕГРЮЛ и внесём информацию в заявление
+					</label>
+					<input type="text" class="form-control" id="husband_company">
+				</div>
+				<br><br>
+				<button type="button" class="btn btn-primary download_sue_1">Скачать исковое заявление</button>
+				<button type="button" class="btn btn-outline-success" id="back-sue">Назад</button>
+			</section>
+
+			<!-- SECTION 6 -->
+			<section id="download_sue">
+				<h2>Скачайте готовое исковое заявление</h2>
+				<button type="submit" value="OK" class="btn btn-primary">Скачать исковое заявление</button>
+			</section>
+
+			<!-- SECTION 7 Заполнить инфо для иска-->
+			<section id="fill_sue">
+				<h2>Заполните данные на исковое заявление</h2>
+				<br>
+				<div class="form-row form-group">
+					<div class="form-holder">
+						<label for="">
+							Имя *
+						</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Фамилия *
+						</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Отчество *
+						</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-row">
+						<label for="">
+							Место жительства *
+						</label>
+						<input type="text" class="form-control" placeholder="Улица" style="margin-bottom: 20px">
+						<input type="text" class="form-control" placeholder="Дом/квартира">
+					</div>
+				</div>
+			</section>
+
+			<!-- SECTION 8 -->
+			<section id="other_docs">
+				<h2>Заполните и соберите остальные документы:</h2>
+				<h4> документы, удостоверяющие личности супругов;
+					свидетельство о заключении брака (документ возвращается заявителю с отметкой о государственной регистрации расторжения брака. Если у вас нет оригинала свидетельства, вам нужно получить повторный документ);
+					квитанция об уплате государственной пошлины;
+					усиленная квалифицированная электронная подпись обоих супругов (если заявление подается через портал госуслуг).</h4>
+			</section>
+
+			<!-- SECTION 9 -->
+			<section id="other_docs_2">
+				<h2>Вот какие документы нужно собрать:</h2>
+				<h4> документы, удостоверяющие личности супругов;
+					совместное заявление;
+					свидетельство о заключении брака (документ возвращается заявителю с отметкой о государственной регистрации расторжения брака. Если у вас нет оригинала свидетельства, вам нужно получить повторный документ);
+					квитанция об уплате государственной пошлины;
+					усиленная квалифицированная электронная подпись обоих супругов (если заявление подается через портал госуслуг).</h4>
+
+			</section>
+
+			<!-- SECTION 10 заполнить данные-->
+			<section id="fill_data">
+				<h2>Заполните эти данные:</h2>
+				<div class="form-row form-group">
+					<div class="form-holder">
+						<label for="">
+							Имя *
+						</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Фамилия *
+						</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Отчество *
+						</label>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-row">
+					<label for="">
+						Место жительства *
+					</label>
+					<input type="text" class="form-control" placeholder="Улица" style="margin-bottom: 20px">
+					<input type="text" class="form-control" placeholder="Дом/квартира">
+				</div>
+
+
+
+			</section>
+
+
+
+			<!-- SECTION 10 -->
+			<section id="fill_data_2">
+				<h2>Заполните эти данные:</h2>
+				<p>
+
+					1.	Копия искового заявления
+					2.	Документ, подтверждающий уплату государственной пошлины
+					3.	Свидетельство о заключении брака (подлинник)
+					4.	Копия свидетельств о рождении ребенка
+
+				</p>
+			</section>
+			<!-- SECTION Registration -->
+			<section id="registration">
+				<div class="form-row form-group">
+					<div class="form-holder">
+						<label for="">
+							Email
+						</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-holder">
+						<label for="">
+							Пароль
+							<input type="password" class="form-control">
+						</label>
+					</div>
+					<button type="button" class="btn btn-outline-success" id="register">Зарегистрироваться</button>
+				</div>
+				<button type="button" class="btn btn-light" id="ESIA_want">Хочу зарегистрироваться через портал госуслуг</button>
+			</section>
+
+			<!-- SECTION ESIA -->
+			<section id="ESIA">
+				<div class="form-row form-group" id="registration-ESIA">
+					<img id="ESIA-img" src="images/ЕСИА-заглушка.png" width="300px">
+				</div>
+			</section>
+
+			<!-- SECTION генерация -->
+			<section id="document">
+				<button type="button" class="btn btn-outline-success" id="submit">Подать заявление</button>
+			</section>
+		</div>
+	</form>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Авторы: Подлесных Константин и Лободенко Роман -->
+	<!-- JQUERY STEP -->
+	<script src="js/jquery.steps.js"></script>
+
+	<script src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script>
+		$('#exampleModal').on('show.bs.modal', function (event) {
+			var button = $(event.relatedTarget) // Button that triggered the modal
+			var recipient = button.data('whatever') // Extract info from data-* attributes
+			// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+			// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+			var modal = $(this)
+			modal.find('.modal-title').text('Обратиться к специалисту: ' + recipient)
+			modal.find('.modal-body input').val(recipient)
+		})
+	</script>
+	<!-- Template created and distributed by Colorlib -->
+</body>
+</html>
